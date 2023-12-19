@@ -43,6 +43,11 @@ export const ServiceCard = ({ sectionData }) => {
             </div>
           ))}
         </div>
+        <div className="mt-20">
+          <button className="bg-primary text-bold text-white px-10 py-3 rounded-full hover:bg-[#0dcaf0] duration-300">
+            Find Doctor
+          </button>
+        </div>
       </div>
     </section>
   );

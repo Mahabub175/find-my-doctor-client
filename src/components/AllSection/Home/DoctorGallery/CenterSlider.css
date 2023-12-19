@@ -1,0 +1,32 @@
+.swiper-slide img {
+  transition: height 0.5s ease-in-out;
+  height: 400px;
+  width: 100%;
+}
+
+.swiper-slide-active img {
+  height: 500px;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+/* Add custom styles for pagination */
+.swiper-pagination {
+  position: relative;
+  margin-top: 20px; /* Add margin on the top */
+}
+
+.swiper-pagination-bullet {
+  background-color: #999999; /* Change the pagination bullet color */
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin: 0 8px; /* Add margin between pagination bullets */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #e74e84; /* Set the active color for the pagination bullet */
+}
