@@ -3,6 +3,7 @@ import { homeServiceCard } from "../../assets/data/serviceCard";
 import { Banner } from "../../components/AllSection/Home/Banner/Banner";
 import { DoctorCategories } from "../../components/AllSection/Home/DoctorCategories/DoctorCategories";
 import { CenterSlider } from "../../components/AllSection/Home/DoctorGallery/CenterSlider";
+import { GetApp } from "../../components/AllSection/Home/GetApp/GetApp";
 import { ServiceCard } from "../../components/AllSection/Home/ServiceCard/ServiceCard";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <ServiceCard sectionData={homeServiceCard} />
       <CenterSlider />
       <DoctorCategories />
+      <GetApp />
     </>
   );
 };
