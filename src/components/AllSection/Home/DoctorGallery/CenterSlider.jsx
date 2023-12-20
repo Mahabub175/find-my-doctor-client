@@ -66,7 +66,11 @@ export const CenterSlider = () => {
               i !== activeIndex ? "opacity-60" : ""
             }`}
           >
-            <img className="object-cover" src={data?.imgurl} alt="slider" />
+            <img
+              className="object-cover center-img"
+              src={data?.imgurl}
+              alt="slider"
+            />
 
             {i === activeIndex && (
               <div>

@@ -1,10 +1,10 @@
-.swiper-slide img {
+.swiper-slide .center-img {
   transition: height 0.5s ease-in-out;
   height: 400px;
   width: 100%;
 }
 
-.swiper-slide-active img {
+.swiper-slide-active .center-img {
   height: 500px;
   width: 100%;
   border-radius: 1rem;
@@ -13,20 +13,20 @@
 /* Add custom styles for pagination */
 .swiper-pagination {
   position: relative;
-  margin-top: 20px; /* Add margin on the top */
+  margin-top: 20px;
 }
 
 .swiper-pagination-bullet {
-  background-color: #999999; /* Change the pagination bullet color */
+  background-color: #999999;
   width: 10px;
   height: 10px;
   display: inline-block;
-  margin: 0 8px; /* Add margin between pagination bullets */
+  margin: 0 8px;
   opacity: 0.7;
   transition: opacity 0.3s ease;
 }
 
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background-color: #e74e84; /* Set the active color for the pagination bullet */
+  background-color: #e74e84;
 }
