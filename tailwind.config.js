@@ -7,6 +7,9 @@ export default withMT({
       // add custom color here
       colors: {
         primary: "#e74e84",
+        secondary: "#555555",
+        violet: "#3f4079",
+        grey: "#f5f8fa",
       },
       // add custom font family here
       fontFamily: {
