@@ -2,6 +2,7 @@ import { Input } from "@material-tailwind/react";
 import axios from "axios";
 import { useState } from "react";
 import { DoctorCard } from "../DoctorCard/DoctorCard";
+import { base_url } from "../../../../utils/config";
 
 export const SpecialtySearch = () => {
   const [specialInput, setSpecialInput] = useState("");
@@ -10,7 +11,7 @@ export const SpecialtySearch = () => {
 
   const fetchSpecialData = async (value) => {
     try {
-      const response = await axios.get("http://localhost:5000/doctors", {
+      const response = await axios.get(`${base_url}/doctors`, {
         params: { specialty: value },
       });
 
