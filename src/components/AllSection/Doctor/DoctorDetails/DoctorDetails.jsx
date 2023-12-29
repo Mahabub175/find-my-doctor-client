@@ -11,6 +11,7 @@ import { data } from "../../../../assets/data/detailsTabData";
 import { GeneralInfo } from "../GeneralInfo/GeneralInfo";
 import { useState } from "react";
 import { DoctorReview } from "../DoctorReview/DoctorReview";
+import AppointmentBooking from "../AppointmentBooking/AppointmentBooking";
 
 const DoctorDetails = () => {
   const doctor = useLoaderData();
@@ -24,8 +25,8 @@ const DoctorDetails = () => {
     <section className="py-32 bg-grey">
       <div className="lg:flex gap-10 justify-center container mx-auto px-5 lg:px-0">
         <DetailsSide doctor={doctor} />
-        <div className="max-w-[800px] mt-16 lg:mt-0">
-          <Tabs id="custom-animation">
+        <div className="w-4/6 mt-16 lg:mt-0">
+          <Tabs id="custom-animation" value={activeTab}>
             <TabsHeader className="flex flex-col lg:flex-row">
               {data.map(({ label, value }) => (
                 <Tab
@@ -51,7 +52,7 @@ const DoctorDetails = () => {
                 <GeneralInfo doctor={doctor} />
               </TabPanel>
               <TabPanel value="book">
-                <GeneralInfo doctor={doctor} />
+                <AppointmentBooking />
               </TabPanel>
               <TabPanel value="review">
                 <DoctorReview />

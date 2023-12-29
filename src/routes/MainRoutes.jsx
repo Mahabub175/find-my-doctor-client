@@ -5,6 +5,8 @@ import AboutUs from "../pages/AboutUs/AboutUs";
 import Doctors from "../pages/Doctors/Doctors";
 import DoctorDetails from "../components/AllSection/Doctor/DoctorDetails/DoctorDetails";
 import { base_url } from "../utils/config";
+import SignIn from "../pages/SignIn/SignIn";
+import SignUp from "../pages/SignUp/SignUp";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ export const router = createBrowserRouter([
         path: "/doctorDetails/:id",
         element: <DoctorDetails />,
         loader: ({ params }) => fetch(`${base_url}/doctor/${params?.id}`),
+      },
+      {
+        path: "/sign-in",
+        element: <SignIn />,
+      },
+      {
+        path: "/sign-up",
+        element: <SignUp />,
       },
     ],
   },
