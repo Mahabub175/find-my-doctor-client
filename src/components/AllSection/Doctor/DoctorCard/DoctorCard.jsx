@@ -22,7 +22,7 @@ export const DoctorCard = ({ doctor }) => {
             <p>
               <span className="text-bold">Location:</span> {item?.location}
             </p>
-            <div className="flex justify-between mt-10 gap-2">
+            <div className="flex flex-col lg:flex-row justify-between mt-10 gap-2">
               <Link to={`/doctorDetails/${item?._id}`}>
                 <button className="bg-transparent text-black border border-primary hover:bg-primary hover:text-white duration-300 px-5 text-sm py-2 text-bold rounded-lg">
                   View Profile
