@@ -7,6 +7,8 @@ import DoctorDetails from "../components/AllSection/Doctor/DoctorDetails/DoctorD
 import { base_url } from "../utils/config";
 import SignIn from "../pages/SignIn/SignIn";
 import SignUp from "../pages/SignUp/SignUp";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import DashboardLayout from "../layout/DashboardLayout";
 
 export const router = createBrowserRouter([
   {
@@ -39,5 +41,10 @@ export const router = createBrowserRouter([
         element: <SignUp />,
       },
     ],
+  },
+  {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [{ path: "/dashboard", element: <Dashboard /> }],
   },
 ]);

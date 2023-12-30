@@ -15,4 +15,8 @@ export const navLists = [
     title: "Contact",
     href: "/contact",
   },
+  {
+    title: "Dashboard",
+    to: "/dashboard",
+  },
 ];

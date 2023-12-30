@@ -3,11 +3,14 @@ import { Navbar, Collapse, Button, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavList } from "./NavList";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../BackToTopButton/BackToTopButton";
+import useAuth from "../../../hooks/useAuth";
 
 const Header = () => {
   const [openNav, setOpenNav] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
   const lastScrollTop = React.useRef(0);
+  const { user, logOut } = useAuth();
 
   React.useEffect(() => {
     const checkScroll = () => {
@@ -53,10 +56,22 @@ const Header = () => {
           <div className="hidden lg:flex gap-10">
             <NavList />
             <div className="lg:flex items-center gap-2 hidden">
-              <Button className="bg-transparent text-black outline outline-1">
-                Log In
-              </Button>
-              <Button className="bg-primary">Sign In</Button>
+              {user ? (
+                <Button className="bg-primary" onClick={logOut}>
+                  Log Out
+                </Button>
+              ) : (
+                <>
+                  <Link to={"/sign-in"} onClick={scrollToTop}>
+                    <Button className="bg-transparent text-black outline outline-1">
+                      Sign In
+                    </Button>
+                  </Link>
+                  <Link to={"/sign-up"} onClick={scrollToTop}>
+                    <Button className="bg-primary">Sign Up</Button>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
 
@@ -76,12 +91,16 @@ const Header = () => {
         <Collapse open={openNav}>
           <NavList />
           <div className="flex flex-col w-full flex-nowrap items-center gap-2 lg:hidden">
-            <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
-              Log In
-            </Button>
-            <Button size="sm" fullWidth className="bg-primary mt-2">
-              Sign In
-            </Button>
+            <Link to={"/sign-in"} onClick={scrollToTop}>
+              <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
+                Sign In
+              </Button>
+            </Link>
+            <Link to={"/sign-up"} onClick={scrollToTop}>
+              <Button size="sm" fullWidth className="bg-primary mt-2">
+                Sign Up
+              </Button>
+            </Link>
           </div>
         </Collapse>
       </Navbar>
