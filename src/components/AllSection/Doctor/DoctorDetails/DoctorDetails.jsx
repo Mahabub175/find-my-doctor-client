@@ -52,7 +52,7 @@ const DoctorDetails = () => {
                 <GeneralInfo doctor={doctor} />
               </TabPanel>
               <TabPanel value="book">
-                <AppointmentBooking />
+                <AppointmentBooking doctor={doctor} />
               </TabPanel>
               <TabPanel value="review">
                 <DoctorReview />

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Typography } from "@material-tailwind/react";
 
 const FooterLinks = ({ sectionData }) => {

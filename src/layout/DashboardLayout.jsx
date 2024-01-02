@@ -3,9 +3,9 @@ import DashboardSideBar from "../components/shared/DashboardSideBar/DashboardSid
 
 const DashboardLayout = () => {
   return (
-    <div className="flex">
+    <div className="flex items-center">
       <DashboardSideBar />
-      <div className="">
+      <div className="absolute right-1/2 top-1/3">
         <Outlet />
       </div>
     </div>

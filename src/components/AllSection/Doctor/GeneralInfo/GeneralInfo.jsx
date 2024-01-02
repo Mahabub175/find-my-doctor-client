@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 export const GeneralInfo = ({ doctor }) => {
   return (
     <div className="bg-white px-10 py-2 rounded-md border-2">

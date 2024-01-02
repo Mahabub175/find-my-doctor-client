@@ -1,6 +1,5 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
-/* eslint-disable react/prop-types */
 export const Categories = ({ sectionData }) => {
   return (
     <div>

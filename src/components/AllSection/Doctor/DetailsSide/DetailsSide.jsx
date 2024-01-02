@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import { Rating } from "@material-tailwind/react";
 import { MdLocationOn } from "react-icons/md";
 

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 // swiper js
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";

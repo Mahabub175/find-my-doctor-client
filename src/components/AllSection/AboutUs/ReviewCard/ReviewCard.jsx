@@ -1,6 +1,5 @@
 import { Rating } from "@material-tailwind/react";
 
-/* eslint-disable react/prop-types */
 export const ReviewCard = ({ sectionData }) => {
   return (
     <section className="container mx-auto mt-20 px-5 lg:px-0">

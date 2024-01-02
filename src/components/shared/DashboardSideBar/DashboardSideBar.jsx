@@ -33,7 +33,7 @@ const DashboardSideBar = () => {
 
   return (
     <div>
-      <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 hidden lg:flex items-center justify-center ">
+      <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 hidden lg:flex items-center justify-center absolute">
         <div className="mb-2 flex flex-col items-center gap-4 p-4">
           <img
             src="https://www.ansonika.com/findoctor/menu_2/img/logo.png"

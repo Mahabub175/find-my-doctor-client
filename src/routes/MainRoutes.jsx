@@ -9,6 +9,7 @@ import SignIn from "../pages/SignIn/SignIn";
 import SignUp from "../pages/SignUp/SignUp";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import DashboardLayout from "../layout/DashboardLayout";
+import Bookings from "../pages/Dashboard/Bookings/Bookings";
 
 export const router = createBrowserRouter([
   {
@@ -45,6 +46,9 @@ export const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <DashboardLayout />,
-    children: [{ path: "/dashboard", element: <Dashboard /> }],
+    children: [
+      { path: "/dashboard", element: <Dashboard /> },
+      { path: "/dashboard/bookings", element: <Bookings /> },
+    ],
   },
 ]);

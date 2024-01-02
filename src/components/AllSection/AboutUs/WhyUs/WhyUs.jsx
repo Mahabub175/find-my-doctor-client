@@ -1,6 +1,5 @@
 import React from "react";
 
-/* eslint-disable react/prop-types */
 export const WhyUs = ({ sectionData }) => {
   return (
     <section className="bg-grey mt-20 py-20 -mb-20">

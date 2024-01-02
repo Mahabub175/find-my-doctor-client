@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 export const AboutUsBanner = ({ sectionData }) => {
   return (
     <section className="container mx-auto px-5 lg:px-0">
