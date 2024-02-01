@@ -1,14 +1,27 @@
-import { Link } from "react-router-dom";
-import useBooking from "../../../hooks/useBooking";
+import React, { useEffect, useState } from "react";
 import { Card, Typography } from "@material-tailwind/react";
+import { base_url } from "../../../../utils/config";
+import axios from "axios";
 
-const TABLE_HEAD = ["Doctor Name", "Date", "Status", ""];
+const TABLE_HEAD = ["Doctor Name", "Date", "Status"];
 
-const Bookings = () => {
-  const bookings = useBooking();
+const AllBookings = () => {
+  const [bookings, setBookings] = useState([]);
 
+  useEffect(() => {
+    const fetchBookings = async () => {
+      try {
+        const response = await axios.get(`${base_url}/appointments`);
+        setBookings(response.data);
+      } catch (error) {
+        console.error("Error fetching bookings:", error);
+      }
+    };
+
+    fetchBookings();
+  }, []);
   return (
-    <section className="container mx-auto">
+    <section>
       <Card className="lg:w-[700px]">
         <table className="table-auto text-left">
           <thead>
@@ -30,14 +43,14 @@ const Bookings = () => {
             </tr>
           </thead>
           <tbody className="overflow-hidden">
-            {bookings[0].map(({ doctor, selectedDate, status }, index) => {
+            {bookings?.map(({ doctor, selectedDate, status }, index) => {
               const isLast = index === bookings[0].length - 1;
               const classes = isLast
                 ? "p-4 overflow-hidden"
                 : "p-4 border-b border-blue-gray-50";
 
               return (
-                <tr key={name}>
+                <tr key={index}>
                   <td className={classes}>
                     <Typography
                       variant="small"
@@ -66,30 +79,6 @@ const Bookings = () => {
                       {status}
                     </Typography>
                   </td>
-                  <td className={classes}>
-                    <Typography
-                      as="a"
-                      href="#"
-                      variant="small"
-                      color="blue-gray"
-                      className="font-medium"
-                    >
-                      {status === "booked" ? (
-                        <Link to={"/payment"}>
-                          <button className="bg-transparent outline outline-primary rounded-full px-6 py-2 text-bold hover:text-white text-primary hover:bg-primary duration-300">
-                            Pay
-                          </button>
-                        </Link>
-                      ) : (
-                        <button
-                          disabled
-                          className="bg-primary outline outline-primary rounded-full px-6 py-2 text-bold text-white hover:bg-primary duration-300"
-                        >
-                          Paid
-                        </button>
-                      )}
-                    </Typography>
-                  </td>
                 </tr>
               );
             })}
@@ -100,4 +89,4 @@ const Bookings = () => {
   );
 };
 
-export default Bookings;
+export default AllBookings;

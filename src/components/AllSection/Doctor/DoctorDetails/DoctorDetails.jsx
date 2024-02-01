@@ -25,7 +25,7 @@ const DoctorDetails = () => {
     <section className="py-32 bg-grey">
       <div className="lg:flex gap-10 justify-center container mx-auto px-5 lg:px-0">
         <DetailsSide doctor={doctor} />
-        <div className="w-4/6 mt-16 lg:mt-0">
+        <div className="lg:w-4/6 mt-16 lg:mt-0">
           <Tabs id="custom-animation" value={activeTab}>
             <TabsHeader className="flex flex-col lg:flex-row">
               {data.map(({ label, value }) => (

@@ -27,9 +27,11 @@ export const DoctorCard = ({ doctor }) => {
                   View Profile
                 </button>
               </Link>
-              <button className="bg-transparent text-black border border-primary hover:bg-primary hover:text-white duration-300 px-5 text-sm py-2 text-bold rounded-lg">
-                Get Appointment
-              </button>
+              <Link to={`/doctorDetails/${item?._id}`}>
+                <button className="bg-transparent text-black border border-primary hover:bg-primary hover:text-white duration-300 px-5 text-sm py-2 text-bold rounded-lg">
+                  Get Appointment
+                </button>
+              </Link>
             </div>
           </div>
         </div>

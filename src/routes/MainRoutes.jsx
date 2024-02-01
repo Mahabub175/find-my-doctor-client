@@ -10,6 +10,10 @@ import SignUp from "../pages/SignUp/SignUp";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import DashboardLayout from "../layout/DashboardLayout";
 import Bookings from "../pages/Dashboard/Bookings/Bookings";
+import Payment from "../pages/Payment/Payment";
+import User from "../pages/Dashboard/Admin/Users/User";
+import AddDoctors from "../pages/Dashboard/Admin/Doctors/AddDoctors";
+import AllBookings from "../pages/Dashboard/Admin/Bookings/AllBookings";
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +38,10 @@ export const router = createBrowserRouter([
         loader: ({ params }) => fetch(`${base_url}/doctor/${params?.id}`),
       },
       {
+        path: "/payments",
+        element: <Payment />,
+      },
+      {
         path: "/sign-in",
         element: <SignIn />,
       },
@@ -49,6 +57,9 @@ export const router = createBrowserRouter([
     children: [
       { path: "/dashboard", element: <Dashboard /> },
       { path: "/dashboard/bookings", element: <Bookings /> },
+      { path: "/dashboard/users", element: <User /> },
+      { path: "/dashboard/add-doctor", element: <AddDoctors /> },
+      { path: "/dashboard/all-bookings", element: <AllBookings /> },
     ],
   },
 ]);

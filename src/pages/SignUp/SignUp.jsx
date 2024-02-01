@@ -28,6 +28,7 @@ const SignUp = () => {
             name: data?.name,
             email: result?.user?.email,
             role: "user",
+            idDeleted: false,
           };
           await axios.post(`${base_url}/users`, body);
         } catch (error) {

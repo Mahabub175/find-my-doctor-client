@@ -3,7 +3,7 @@ import { MdLocationOn } from "react-icons/md";
 
 export const DetailsSide = ({ doctor }) => {
   return (
-    <div className="bg-white border-2 rounded-md">
+    <div className="bg-white border-2 rounded-md lg:h-[55rem]">
       <img src={doctor?.image} alt="" className="w-full lg:h-[450px]" />
       <div className="flex flex-col justify-center items-center p-5 gap-2">
         <p className="text-xl font-bold">{doctor?.name}</p>
