@@ -14,6 +14,7 @@ import Payment from "../pages/Payment/Payment";
 import User from "../pages/Dashboard/Admin/Users/User";
 import AddDoctors from "../pages/Dashboard/Admin/Doctors/AddDoctors";
 import AllBookings from "../pages/Dashboard/Admin/Bookings/AllBookings";
+import ContactUs from "../pages/ContactUs/ContactUs";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path: "/about-us",
         element: <AboutUs />,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs />,
       },
       {
         path: "/doctors",

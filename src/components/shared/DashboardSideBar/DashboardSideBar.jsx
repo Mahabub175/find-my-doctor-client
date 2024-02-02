@@ -55,13 +55,14 @@ const DashboardSideBar = () => {
           )}
 
           <hr className="my-2 border-blue-gray-50" />
-
-          <ListItem>
-            <ListItemPrefix>
-              <HomeIcon className="h-5 w-5" />
-            </ListItemPrefix>
-            Home
-          </ListItem>
+          <Link to={"/"}>
+            <ListItem>
+              <ListItemPrefix>
+                <HomeIcon className="h-5 w-5" />
+              </ListItemPrefix>
+              Home
+            </ListItem>
+          </Link>
           <ListItem>
             <ListItemPrefix>
               <UserCircleIcon className="h-5 w-5" />

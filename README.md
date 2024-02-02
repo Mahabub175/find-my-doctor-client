@@ -1,8 +1,17 @@
-# React + Vite
+# Find My Doctor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Live Url - https://find-my-doctor-8c735.web.app/
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This repo contains the code for the Find My Doctor website.
+
+## Installation
+
+Provide step by step series of examples and explanations about how to get a development environment running.
+
+```bash
+git clone <repo-url>
+cd <project-name>
+npm install
+```
